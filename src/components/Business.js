@@ -1,8 +1,7 @@
 import React from 'react';
-
 import axios from 'axios';
-
 import apiKey from '../const/apiKey';
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 export default class Business extends React.Component {
     constructor(props) {
@@ -32,7 +31,7 @@ export default class Business extends React.Component {
                             <div class="z-depth-5">
                                 <div class="card">
                                     <div class="card-image">
-                                        <img alt="img"  src={dados.urlToImage ? dados.urlToImage : require('../img/img404.png')} />
+                                        <img alt="img" src={dados.urlToImage ? dados.urlToImage : require('../img/img404.png')} />
                                     </div>
                                     <div class="card-content">
                                         <h5 >{dados.title}</h5>
@@ -46,6 +45,7 @@ export default class Business extends React.Component {
                         </div>
                     </div>
                 )}
+                <ScrollUpButton />
             </div>
         );
     }

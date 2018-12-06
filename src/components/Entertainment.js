@@ -1,8 +1,7 @@
 import React from 'react';
-
 import axios from 'axios';
-
 import apiKey from '../const/apiKey';
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 export default class Entertainment extends React.Component {
     constructor(props) {
@@ -46,6 +45,7 @@ export default class Entertainment extends React.Component {
                         </div>
                     </div>
                 )}
+                <ScrollUpButton />
             </div>
         );
     }
