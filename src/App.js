@@ -2,15 +2,135 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
-import News from './components/News';
-import Sport from './components/Sport';
-import Technology from './components/Technology';
-import Health from './components/Health';
-import Science from './components/Science';
-import Business from './components/Business';
-import Entertainment from './components/Entertainment';
 import Header from './components/Header';
+
+const News = Loadable({
+  loader: () => import('./components/News'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Sport = Loadable({
+  loader: () => import('./components/Sport'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Technology = Loadable({
+  loader: () => import('./components/Technology'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Health = Loadable({
+  loader: () => import('./components/Health'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Science = Loadable({
+  loader: () => import('./components/Science'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Business = Loadable({
+  loader: () => import('./components/Business'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
+
+const Entertainment = Loadable({
+  loader: () => import('./components/Entertainment'),
+  loading: () =>
+    <div style={{ marginTop: "200px" }}>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+});
 
 class App extends Component {
   render() {
