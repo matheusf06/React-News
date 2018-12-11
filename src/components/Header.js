@@ -7,11 +7,11 @@ export default class Header extends React.Component {
             <div class="container">
                 <h3 >React News</h3>
                 <div style={{ marginTop: "50px" }}>
-                    <button class="btn-flat waves-effect" onClick={home}>Home</button>
+                    <button class="btn-flat waves-effect" onClick={home}>Inicio</button>
                     <button class="btn-flat waves-effect" onClick={business}>Negócios</button>
-                    <button class="btn-flat waves-effect" onClick={entertainment}>Entreteninmento</button>
+                    <button class="btn-flat waves-effect" onClick={entertainment}>Entretenimento</button>
                     <button class="btn-flat waves-effect" onClick={health}>Saúde</button>
-                    <button class="btn-flat waves-effect" onClick={sport}>Sports</button>
+                    <button class="btn-flat waves-effect" onClick={sport}>Esportes</button>
                     <button class="btn-flat waves-effect" onClick={science}>Ciências</button>
                     <button class="btn-flat waves-effect" onClick={technology}>Tecnologia</button>
                 </div>
