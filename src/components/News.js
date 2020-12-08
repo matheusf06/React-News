@@ -3,6 +3,9 @@ import axios from 'axios';
 import apiKey from '../const/apiKey';
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 export default class News extends React.Component {
     constructor(props) {
         super(props);
@@ -24,29 +27,34 @@ export default class News extends React.Component {
 
     render() {
         return (
-            <div class="container">
-                {this.state.dados.map(dados =>
-                    <div class="container" style={{ marginTop: "80px" }} >
-                        <div>
-                            <div class="z-depth-5">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img alt="img" src={dados.urlToImage ? dados.urlToImage : require('../img/img404.png')} />
-                                    </div>
-                                    <div class="card-content">
-                                        <h5 >{dados.title}</h5>
-                                        <p style={{ marginTop: "60px" }}>{dados.content ? dados.content : ''}</p>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href={dados.url ? dados.url : ''}>Ver completo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <>
+                {this.state.dados.map(dados =>                    
+                <Card style={{'height': '45em', 'width': '20rem', 'position': 'relative', 'margin': '1em' }}>
+                  <Card.Img style={{'height': '260px'}} src={dados.urlToImage ? dados.urlToImage : require('../img/img404.png')} alt="Imagem da Notícia"/>
+                  <Card.Body>
+                    <Card.Title>{dados.title}</Card.Title>
+                    <Card.Text style={{'height': '16em'}}>
+                      {dados.content ? dados.content : 'Informações indisponíveis'}
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Body>
+                  <Button variant="primary" href={dados.url ? dados.url : ''} style={{'': '0px'}}>Ver mais</Button>
+                  </Card.Body>
+                </Card>
                 )}
-                <ScrollUpButton />
-            </div>
+                <ScrollUpButton
+                StopPosition={0}
+                ShowAtPosition={500}
+                EasingType='easeOutCubic'
+                AnimationDuration={500}
+                ContainerClassName='ScrollUpButton__Container'
+                TransitionClassName='ScrollUpButton__Toggled'
+                style={{'backgroundColor': 'white'}}
+                />
+            </>
         );
     }
 }
+
+
+
