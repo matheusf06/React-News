@@ -38,7 +38,7 @@ export default class Sport extends React.Component {
                     </Card.Text>
                   </Card.Body>
                   <Card.Body>
-                  <Button variant="primary" href={dados.url ? dados.url : ''} style={{'': '0px'}}>Ver mais</Button>
+                  <Button variant="outline-secondary" href={dados.url ? dados.url : ''} style={{'': '0px'}}>Ver mais</Button>
                   </Card.Body>
                 </Card>
                 )}
