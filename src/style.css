@@ -1,0 +1,9 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+    grid-gap: 12px;
+  }
+
+  .img {
+      height: 245px; 
+  }
