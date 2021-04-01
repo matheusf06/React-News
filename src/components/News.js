@@ -5,8 +5,6 @@ import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
-
 export default class News extends React.Component {
     constructor(props) {
         super(props);
