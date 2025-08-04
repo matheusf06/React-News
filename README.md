@@ -55,4 +55,4 @@ npm start
 
 A aplicação estará rodando em http://localhost:3000.
 
-![Demonstração](demo.gif)
+![Demonstração]([demo.gif](https://i.imgur.com/opu5ClH.gif))
