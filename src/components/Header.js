@@ -1,27 +1,13 @@
-import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import React from 'react';
 
-export default function Header() {
+// O href="#" leva para o topo da página por padrão
+function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Navbar.Brand href="#/inicio">React News</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#/inicio">Inicio</Nav.Link>
-          <Nav.Link href="#/negocios">Negócios</Nav.Link>
-          <Nav.Link href="#/entretenimento">Entretenimento</Nav.Link>
-          <Nav.Link href="#/saude">Saúde</Nav.Link>
-          <Nav.Link href="#/esporte">Esportes</Nav.Link>
-          <Nav.Link href="#/ciencias">Ciências</Nav.Link>
-          <Nav.Link href="#/tecnologia">Tecnologia</Nav.Link>
-        </Nav>
-        <Nav>
-          <Nav.Link href="#/sobre" disabled>
-            Sobre nós
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <header className="app-header">
+      <h1>React News</h1>
+      <a href="#" className="header-link">Início</a>
+    </header>
   );
 }
+
+export default Header;
